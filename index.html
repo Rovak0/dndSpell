@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Random DnD Spell</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <header>
+        Get a random dnd spell!
+    </header>
+
+    <div>
+        <!-- what options go into a random spell? -->
+         <!-- unearthed arcane, level of spells, ritual -->
+        <p>What catagories of spells are you looking for?</p>
+        <label for="unearthedArcane">Unearthed Arcane?</label>
+        <select name="unearthedArcane" id="arcana" class="dropDown">
+            <!-- default with no because they aren't always legal (in DnD) -->
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+            <option value="onlyUA">Only Unearthed Arcane</option>
+        </select> <br />
+
+        <label for="ritual">Ritual?</label>
+        <select name="ritual" id="ritual" class="dropDown">
+            <!-- default to yes because all ritual spells are legal -->
+             <!-- don't know why someone would exclude ritual spells -->
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="onlyRit">Only Rituals</option>
+        </select>
+
+        <div class="selector">
+            <h2>What level of spells are you looking for?</h2>
+            <div class="spellLevels">
+                <input type="checkbox" id="cantrip" name="cantrip" unchecked/>
+                <label for="cantrip">Cantrip</label> <br />
+                <input type="checkbox" id="lvl1" name="lvl1" unchecked/>
+                <label for="lvl1">Level 1</label> 
+                <!-- <label for="lvl1weight"></label> 
+                <input type="text" id="lvl1weight"> -->
+                <br />
+                <input type="checkbox" id="lvl2" name="lvl2" unchecked/>
+                <label for="lvl2">Level 2</label> <br />
+                <input type="checkbox" id="lvl3" name="lvl3" unchecked/>
+                <label for="lvl3">Level 3</label> <br />
+                <input type="checkbox" id="lvl4" name="lvl4" unchecked/>
+                <label for="lvl4">Level 4</label> <br />
+                <input type="checkbox" id="lvl5" name="lvl5" unchecked/>
+                <label for="lvl5">Level 5</label> <br />
+                <input type="checkbox" id="lvl6" name="lvl6" unchecked/>
+                <label for="lvl6">Level 6</label> <br />
+                <input type="checkbox" id="lvl7" name="lvl7" unchecked/>
+                <label for="lvl7">Level 7</label> <br />
+                <input type="checkbox" id="lvl8" name="lvl8" unchecked/>
+                <label for="lvl8">Level 8</label> <br />         
+                <input type="checkbox" id="lvl9" name="lvl9" unchecked/>
+                <label for="lvl9">Level 9</label> <br />
+            </div>
+            <h2>Specific Classes?</h2>
+            <div class="classTargets">
+                <!-- <input type="checkbox" id="allClasses" name="allClasses" unchecked/>
+                <label for="allClasses">Any Class</label> <br /> -->
+                <input type="checkbox" id="artificer" name="artificer" unchecked/>
+                <label for="artificer">Artificer</label> <br />
+                <input type="checkbox" id="bard" name="bard" unchecked/>
+                <label for="bard">Bard</label> 
+                <br />
+                <input type="checkbox" id="cleric" name="cleric" unchecked/>
+                <label for="cleric">Cleric</label> <br />
+                <input type="checkbox" id="druid" name="druid" unchecked/>
+                <label for="druid">Druid</label> <br />
+                <input type="checkbox" id="paladin" name="paladin" unchecked/>
+                <label for="paladin">Paladin</label> <br />
+                <input type="checkbox" id="ranger" name="ranger" unchecked/>
+                <label for="ranger">Ranger</label> <br />
+                <input type="checkbox" id="sorcerer" name="sorcerer" unchecked/>
+                <label for="sorcerer">Sorcerer</label> <br />
+                <input type="checkbox" id="warlock" name="warlock" unchecked/>
+                <label for="warlock">Warlock</label> <br />
+                <input type="checkbox" id="wizard" name="wizard" unchecked/>
+                <label for="wizard">Wizard</label> <br />
+            </div>
+        </div>
+        <br/>
+
+        <button id="getSpell">Generate spell!</button>
+
+        <div class="spellReceiver" id="spellHolder">
+
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
